@@ -1,0 +1,73 @@
+body {
+  background-color: #a6babd;
+  background-image: url('https://bing.img.run/1366x768.php');
+  background-repeat: no-repeat;
+  background-size: cover;
+  //background-position: center;
+}
+
+[component="main@header"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  background-color: #3B3B3BAB;
+
+  [component="main@header-options"] {
+    position: fixed;
+    float: right;
+    right: 1.2em;
+    width: 25vw;
+    height: inherit;
+
+    *[list-item] {
+      position: relative;
+      width: 38px;
+      height: 38px;
+      margin: 8px;
+
+      color: white;
+      font-size: 1.5em;
+
+      border: none;
+      border-radius: 100%;
+
+      background-color: transparent;
+      transition: background-color .2s cubic-bezier(.5, 0, .74, .74);
+
+      &:hover {
+        background-color: #8b9ea849;
+      }
+
+      ;
+    }
+  }
+
+  a[component="main@header-home"] {
+    position: absolute;
+    left: 28px;
+    line-height: 52px;
+
+    &::after {
+      content: "UwU";
+      font-size: small;
+    }
+  }
+
+  ;
+}
+
+;
+
+// Html element style.
+
+a {
+  color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+}

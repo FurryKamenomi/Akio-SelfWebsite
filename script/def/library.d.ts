@@ -1,0 +1,1 @@
+/// <reference path="./ua-parser.d.ts" />

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title use-i18n="{{title}}">Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@1.0.35/src/ua-parser.min.js"></script>
+  <script type="module" src="./script/dist/main.js"></script>
+  <link rel="stylesheet/less" href="./asset/style/component.base.less">
+  <link rel="stylesheet/less" href="./asset/style/index.default.less">
+  <link rel="stylesheet/less" detect-platform href="./asset/style/index.default.less">
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+  <script>
+    if (window.location.hostname.split('.').length !== 0)
+      less.watch();
+  </script>
+</head>
+
+<body>
+  <div component="main@header" use-blur>
+    <a component="main@header-home" href="/">Akio</a>
+    <div component="main@header-options" list-box>
+      <button list-item="options-option" use-icon style-mobile>&#xe5d2</button>
+      <button list-item="options-postcard" use-icon>&#xe7fd</button>
+      <button list-item="options-search" use-icon>&#xe8b6</button>
+      <button list-item="options-tag" use-icon>&#xe866</button>
+      <button list-item="options-article" use-icon>&#xef42</button>
+      <button list-item="options-about" use-icon>&#xe88e</button>
+      <button list-item="options-link" use-icon>&#xe157</button>
+    </div>
+  </div>
+</body>
+
+</html>

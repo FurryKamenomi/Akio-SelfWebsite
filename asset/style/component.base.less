@@ -1,0 +1,31 @@
+[list-box] {
+  display: -ms-flex;
+  display: -moz-flex;
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+;
+
+* [use-icon] {
+  @font-face {
+    font-family: SymbolFont;
+    src: url('/asset/font/MaterialSymbols.ttf');
+  }
+  font-family: SymbolFont;
+};
+
+* [use-blur] {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: hidden;
+};
