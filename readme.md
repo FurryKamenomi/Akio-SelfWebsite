@@ -20,21 +20,37 @@
 
 ## 项目使用：
 
+### 首次运行
+
+在开发本项目时，页面文件会警示脚本文件丢失。
+
+不用担心，在该目录下的终端里发送 ``tsc`` 或 ``tsc -watch`` 进行编译监听。
+
+接着就解析成功正常啦。
+
 ### 页面插入
 
-可在 ``/script/src/pages/`` 目录下创建你的新页面！
+可在 ``/pages/`` 目录下创建你的新页面！
 
 在页面跳转时，主脚本会根据 location.search 以及你所定义的 ``<FolderName>``（无大小写检查）进行导入其页面数据。
 
 模板结构如下：
 
-````
+```
 Tree - Pages
 	┗ <FolderName>
 		┗ index.html             /* Your pages data. */
-		┗ <ScriptName>.ts(x)     /* *Optional. */
+		┗ <ScriptName>.js        /* *Optional. Wont complie ts script. */
 		┗ <StyleName>.less/css   /* *Optional, Less will be complied. */
-````
+```
+
+如果你想使用ts脚本，可在 ``/script/src/pages/<FolderName>/`` 目录下编写。
+
+在页面文件导入中使用以下格式：
+
+```html
+<script type="module" src="/script/dist/<FolderName>/<ScriptFile>">
+```
 
 在 index.html 文件当中，你可不必重复声明 \<doctype html>、\<html>、\<body> 等，直接插入\<div>等。
 
