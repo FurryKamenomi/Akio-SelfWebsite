@@ -1,15 +1,21 @@
-[component="main@header"] {
+@media screen and (width >=480px) {
+  [component="main@header"] {
+    height: 52px;
 
-  [component="main@header-options"] {
+    [component="main@header-options"] {
+      float: right;
+      right: 1.2em;
+      width: 25vw;
 
-    *[list-item] {
-      cursor: pointer;
+      *[list-item] {
+        cursor: pointer;
+      }
     }
   }
-}
 
-;
+  ;
 
-* [style-mobile] {
-  display: none;
+  [component="main@header-home"] {
+    left: 28px;
+  }
 }

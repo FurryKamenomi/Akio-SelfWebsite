@@ -1,11 +1,17 @@
-[component="main@header"] {
+@media screen and (width < 480px) {
+  [component="main@header"] {
+    height: 104px;
 
-  [component="main@header-options"] {
+    [component="main@header-home"] {
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-    *[list-item] {
-      &:not([style-mobile]) {
-        display: none;
-      }
+    [component="main@header-options"] {
+      top: 52px;
+      width: 100%;
+
+      justify-content: center;
     }
   }
 }

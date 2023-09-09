@@ -5,24 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title use-i18n="{{title}}">Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@1.0.35/src/ua-parser.min.js"></script>
-  <script type="module" src="./script/dist/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@8.0.1/lib/marked.umd.min.js"></script>
   <link rel="stylesheet/less" href="./asset/style/component.base.less">
   <link rel="stylesheet/less" href="./asset/style/index.default.less">
-  <link rel="stylesheet/less" detect-platform href="./asset/style/index.default.less">
+  <!-- <link rel="stylesheet/less" detect-platform href="./asset/style/index.default.less"> -->
   <script src="https://cdn.jsdelivr.net/npm/less"></script>
-  <script>
-    if (window.location.hostname.split('.').length !== 0)
-      less.watch();
-  </script>
+  <script type="module" src="./script/dist/main.js"></script>
 </head>
 
 <body>
   <div component="main@header" use-blur>
-    <a component="main@header-home" href="/">Akio</a>
+    <a component="main@header-home" href="/index.html">Akio</a>
     <div component="main@header-options" list-box>
-      <button list-item="options-option" use-icon style-mobile>&#xe5d2</button>
-      <button list-item="options-postcard" use-icon>&#xe7fd</button>
+      <button list-item="options-home" use-icon>&#xe88a</button>
       <button list-item="options-search" use-icon>&#xe8b6</button>
       <button list-item="options-tag" use-icon>&#xe866</button>
       <button list-item="options-article" use-icon>&#xef42</button>
@@ -30,6 +25,22 @@
       <button list-item="options-link" use-icon>&#xe157</button>
     </div>
   </div>
+
+  <!-- <div> Do Not Cry, We Love You~ </div> -->
+
+  <div component="main@content">
+
+  </div>
+
+  <footer component="main@footer">
+    <!-- <div ></div> -->
+    <div id="footer-powered">
+      Copyright (c) 2023<a href="/index.html">Akio</a>
+    </div>
+    <div id="footer-opensource">
+      Open source with<a target="_blank" href="https://opensource.org/license/mit/">MIT License</a>
+    </div>
+  </footer>
 </body>
 
 </html>
